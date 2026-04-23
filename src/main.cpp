@@ -6,14 +6,17 @@
 #define BLYNK_TEMPLATE_NAME "New Template"
 #define BLYNK_AUTH_TOKEN "IEEtzeTuvPXBYmQcNEVMwCOW4x5uDzAW"
 
+#include <WiFi.h>
+#include <BlynkSimpleEsp32.h>
+#include <DHT.h>
 
 char ssid[] = "Wokwi-GUEST";
 char pass[] = "";
 
-#define DHTPIN D15
+#define DHTPIN 15
 #define DHTTYPE DHT22
-#define SOIL_PIN D34
-#define RELAY_PIN D5
+#define SOIL_PIN 34
+#define RELAY_PIN 5
 
 DHT dht(DHTPIN, DHTTYPE);
 BlynkTimer timer;
